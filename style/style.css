@@ -1,0 +1,147 @@
+:root {
+    --main-color: #8f754f;
+    --sec-color :#fff;
+    --mini-grey:rgb(233, 233, 233);
+    --grey-coolr : #403d38;
+    --transition: all .5s ease;
+  }
+  .main-color {
+    color: var(--main-color);
+  }
+  .bg-main-color {
+    background-color: var(--main-color);
+  }
+  .bg-mini-grey{
+    background-color: var(--mini-grey);
+  }
+  .grey-coolr{
+    background-color: var(--grey-coolr);
+}
+.footer {
+  background-color: #353330;
+}
+
+.navbar{
+    z-index: 2;
+    width: 100%;
+    
+}
+
+
+.collapse{
+    flex-grow: 0;
+}
+
+.container-fluid{
+
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    
+  }
+
+
+  .content-btns button {
+    color: var(--sec-color);
+    padding: 15px 20px;
+    border-radius: 4px;
+    transition: background-color 700ms ease-in-out, color 1s ease-in;
+  }
+  .first-btn {
+    background-color: var(--main-color);
+    border: none;
+  }
+  .sec-btn {
+    background-color: transparent;
+    border: solid 1px var(--sec-color);
+  }
+  .first-btn:hover,
+  .sec-btn:hover {
+    background-color: var(--sec-color);
+    color :var(--main-color);
+    cursor: pointer;
+  }
+
+  .layer {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--sec-color);
+    background-color: black;
+    opacity: 0.7;
+  }
+  .content{
+    z-index: 1;
+  }
+
+  .animation-parent {
+    width: 30px;
+    height: 50px;
+    bottom: 10px;
+    position: absolute;
+    border-radius: 50rem;
+    border: 1px solid var(--sec-color);
+    cursor: pointer;
+  }
+  .animation-element {
+    position: absolute;
+    background-color: var(--sec-color);
+    left: 50%;
+    transform: translateX(-50%);
+    height: 8px;
+    width: 8px;
+    top: 1px;
+    border-radius: 50%;
+    animation-name: animate-to-bottom;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes animate-to-bottom {
+    0% {
+      opacity: 0;
+      top: 10%;
+    }
+    50% {
+      opacity: 1;
+      top: 50%;
+    }
+    100% {
+      opacity: 0;
+      top: 80%;
+    }
+  }
+
+  .footer .social li {
+    color: var(--main-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+#f:hover {
+  color: #4267B2;
+}
+#g:hover {
+  color: #db4a39;
+}
+#l:hover {
+  color: #0072b1;
+}
+#t:hover {
+  color: #00acee;
+}
+.footer .social li :hover{
+  transform: scale(1.1);
+}
+
+
+  /* .card{
+    transition: all .3s ease-in-out;
+  }
+  .card:hover{
+    transform: scale(1.1);
+  } */
+
